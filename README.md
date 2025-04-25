@@ -1,13 +1,11 @@
 
 # Analiza wskaźnika MACD z wykorzystaniem danych giełdowych
 
-## Opis projektu
-
 Projekt polega na implementacji i analizie działania technicznego wskaźnika **MACD (Moving Average Convergence Divergence)**, który służy do identyfikacji momentów kupna i sprzedaży akcji. Został on wykorzystany do przeprowadzenia symulacji transakcji giełdowych dla trzech różnych spółek o odmiennych trendach rynkowych: Apple (AAPL), Nestlé (NESN) i Allegro (ALEP).
 
 Projekt został wykonany w ramach zajęć **Metody Numeryczne**, implementacja została przeprowadzona w Pythonie.
 
-## 📊 Czym jest MACD?
+## Czym jest MACD?
 
 MACD to różnica dwóch wykładniczych średnich kroczących (EMA) – krótszej i dłuższej. W projekcie przyjęto:
 - `Nshort = 12` – EMA krótkoterminowa,
@@ -15,27 +13,14 @@ MACD to różnica dwóch wykładniczych średnich kroczących (EMA) – krótsze
 - `Nsignal = 9` – EMA wskaźnika MACD (linia sygnałowa).
 
 Przecięcia MACD i linii sygnałowej są interpretowane jako:
-- 📈 **Kupno** – MACD przecina linię sygnałową od dołu,
-- 📉 **Sprzedaż** – MACD przecina linię sygnałową od góry.
+- **Kupno** – MACD przecina linię sygnałową od dołu,
+- **Sprzedaż** – MACD przecina linię sygnałową od góry.
 
-## 📚 Sprawozdanie
+## Sprawozdanie
 
 Szczegółowe opisy algorytmów, interpretacja wyników oraz wykresy znajdują się w pliku [MACD_MN1.pdf](./MACD_MN1.pdf).
 
-
-## 📂 Struktura projektu
-
-```
-.
-├── data/                    # Dane wejściowe CSV dla spółek AAPL, NESN, ALEP
-├── diagrams/               # Wygenerowane wykresy
-│   └── zoom/               # Powiększone fragmenty wykresów
-├── main.py                 # Główny skrypt Pythona
-├── MACD_MN1.pdf            # Sprawozdanie z projektu
-└── README.md               # Niniejszy plik
-```
-
-## ⚙️ Wymagania
+## Wymagania
 
 - Python 3.10+
 - `pandas`
@@ -48,7 +33,7 @@ Można je zainstalować poleceniem:
 pip install requirements.txt
 ```
 
-## 🚀 Uruchomienie
+## Uruchomienie
 
 1. Umieść pliki danych w folderze `data/` (`AAPL.csv`, `NESN.csv`, `ALEP.csv`).
 2. W pliku `main.py` zmień wartość `datachoice`:
@@ -63,7 +48,7 @@ python main.py
 
 W folderze `diagrams/` pojawią się wygenerowane wykresy.
 
-## 🧪 Co robi program?
+## Co robi program?
 
 - Oblicza wskaźniki EMA, MACD i linię sygnałową.
 - Identyfikuje momenty przecięć (kupna/sprzedaży).
