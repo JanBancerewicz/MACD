@@ -7,6 +7,10 @@ This project involves the implementation and analysis of the **MACD (Moving Aver
 
 The project was completed as part of the **Numerical Methods** course.
 
+# Report
+
+A detailed description of algorithms, results interpretation, and diagrams are available in [MACD_MN1.pdf](./MACD_MN1.pdf) (in Polish).
+
 ## What is MACD?
 
 MACD is the difference between two exponential moving averages (EMA) — a short-term and a long-term one. The project uses:
@@ -17,10 +21,6 @@ MACD is the difference between two exponential moving averages (EMA) — a short
 MACD and signal line crossovers are interpreted as:
 - **Buy signal** – MACD crosses the signal line from below,
 - **Sell signal** – MACD crosses the signal line from above.
-
-## Report
-
-A detailed description of algorithms, results interpretation, and charts are available in [MACD_MN1.pdf](./MACD_MN1.pdf) (in Polish).
 
 
 ## Requirements
