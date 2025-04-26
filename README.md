@@ -1,62 +1,67 @@
 
-# Analiza wskaźnika MACD z wykorzystaniem danych giełdowych
+# MACD Indicator Analysis Using Stock Market Data
 
-Projekt polega na implementacji i analizie działania technicznego wskaźnika **MACD (Moving Average Convergence Divergence)**, który służy do identyfikacji momentów kupna i sprzedaży akcji. Został on wykorzystany do przeprowadzenia symulacji transakcji giełdowych dla trzech różnych spółek o odmiennych trendach rynkowych: Apple (AAPL), Nestlé (NESN) i Allegro (ALEP).
+## Project Overview
 
-Projekt został wykonany w ramach zajęć **Metody Numeryczne**, implementacja została przeprowadzona w Pythonie.
+This project involves the implementation and analysis of the **MACD (Moving Average Convergence Divergence)** technical indicator, used to identify potential buy and sell signals for stocks. Simulations were performed for three companies representing different market trends: Apple (AAPL), Nestlé (NESN), and Allegro (ALEP).
 
-## Czym jest MACD?
+The project was completed as part of the **Numerical Methods** course.
 
-MACD to różnica dwóch wykładniczych średnich kroczących (EMA) – krótszej i dłuższej. W projekcie przyjęto:
-- `Nshort = 12` – EMA krótkoterminowa,
-- `Nlong = 26` – EMA długoterminowa,
-- `Nsignal = 9` – EMA wskaźnika MACD (linia sygnałowa).
+## What is MACD?
 
-Przecięcia MACD i linii sygnałowej są interpretowane jako:
-- **Kupno** – MACD przecina linię sygnałową od dołu,
-- **Sprzedaż** – MACD przecina linię sygnałową od góry.
+MACD is the difference between two exponential moving averages (EMA) — a short-term and a long-term one. The project uses:
+- `Nshort = 12` – short-term EMA,
+- `Nlong = 26` – long-term EMA,
+- `Nsignal = 9` – EMA of the MACD indicator (signal line).
 
-## Sprawozdanie
+MACD and signal line crossovers are interpreted as:
+- **Buy signal** – MACD crosses the signal line from below,
+- **Sell signal** – MACD crosses the signal line from above.
 
-Szczegółowe opisy algorytmów, interpretacja wyników oraz wykresy znajdują się w pliku [MACD_MN1.pdf](./MACD_MN1.pdf).
+## Report
 
-## Wymagania
+A detailed description of algorithms, results interpretation, and charts are available in [MACD_MN1.pdf](./MACD_MN1.pdf) (in Polish).
+
+
+## Requirements
 
 - Python 3.10+
 - `pandas`
 - `numpy`
 - `matplotlib`
 
-Można je zainstalować poleceniem:
+Install them using:
+
 
 ```bash
 pip install requirements.txt
 ```
 
-## Uruchomienie
+## How to Run
 
-1. Umieść pliki danych w folderze `data/` (`AAPL.csv`, `NESN.csv`, `ALEP.csv`).
-2. W pliku `main.py` zmień wartość `datachoice`:
+1. Place the input data files in the `data/` folder (`AAPL.csv`, `NESN.csv`, `ALEP.csv`).
+2. In `main.py`, set the value of `datachoice`:
    - `0` – Apple,
    - `1` – Nestlé,
    - `2` – Allegro.
-3. Uruchom program: (możliwe, że będzie trzeba odkomentować niektóre fragmenty)
+3. Run the script:
 
 ```bash
 python main.py
 ```
 
-W folderze `diagrams/` pojawią się wygenerowane wykresy.
+The generated plots will appear in the `diagrams/` folder.
 
-## Co robi program?
+## Program objective
 
-- Oblicza wskaźniki EMA, MACD i linię sygnałową.
-- Identyfikuje momenty przecięć (kupna/sprzedaży).
-- Symuluje zachowanie portfela przy pełnych transakcjach w tych momentach.
-- Generuje wykresy:
-  - cen akcji z oznaczonymi punktami transakcji,
-  - przebiegu MACD i SIGNAL,
-  - wartości portfela,
-  - liczby posiadanych akcji,
-  - zysków i strat z każdej transakcji.
+- Calculates EMA, MACD, and the signal line.
+- Detects crossover points (buy/sell signals).
+- Simulates a portfolio based on full transactions at detected points.
+- Generates plots:
+  - Stock prices with buy/sell signals,
+  - MACD and SIGNAL line plot,
+  - Portfolio value over time,
+  - Number of shares held,
+  - Profits and losses from each transaction.
+
 
